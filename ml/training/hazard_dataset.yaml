@@ -1,0 +1,16 @@
+# Ultralytics YOLO dataset definition for a custom SENTINEL-X hazard model.
+# Place images/labels in YOLO format under ml/datasets/hazards (git-ignored):
+#   ml/datasets/hazards/images/{train,val,test}/*.jpg
+#   ml/datasets/hazards/labels/{train,val,test}/*.txt
+# Class names below must match MODEL_CLASS_MAP in .env (defaults already do).
+path: ../datasets/hazards
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: fire
+  1: smoke
+  2: accident
+  3: spark
+  4: fall

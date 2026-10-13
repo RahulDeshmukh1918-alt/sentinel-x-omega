@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local databases
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Video data and uploads (private footage must never be committed)
+data/uploads/*
+!data/uploads/.gitkeep
+data/sample_videos/*
+!data/sample_videos/.gitkeep
+data/test_data/*
+!data/test_data/.gitkeep
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+
+# Model weights, datasets and training runs
+ml/models/*
+!ml/models/.gitkeep
+ml/datasets/
+ml/runs/
+runs/
+ml/evaluation/results/
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

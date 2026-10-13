@@ -1,0 +1,4 @@
+# Optional: real YOLO inference and model training (large download, includes PyTorch).
+# For a CUDA GPU, install the matching torch build first: https://pytorch.org/get-started/locally/
+-r requirements.txt
+ultralytics>=8.2
