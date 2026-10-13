@@ -145,7 +145,11 @@ class InMemoryIncidentSink:
         inc["frames_observed"] = event.total_hits
         inc["peak_confidence"] = max(inc["peak_confidence"], event.max_confidence)
         if risk.score > inc["risk_score"]:
+            escalated = Severity(inc["severity"]).rank < risk.severity.rank
             inc["risk_score"], inc["severity"] = risk.score, risk.severity.value
+            if escalated:  # mirror the DB sink: new recommendations for the higher severity
+                recs = ResponseRecommendationAgent().recommend(event.hazard_type, risk.severity)
+                inc["recommendations"] = [(r.department, r.action, r.priority.value) for r in recs]
 
     def on_ended(self, ctx, event, risk, incident_id):
         self.on_updated(ctx, event, risk, incident_id)
