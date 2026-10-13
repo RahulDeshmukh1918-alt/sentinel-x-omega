@@ -297,7 +297,7 @@ Every year, road accidents claim the lives of **1.3 million** people, with over 
   
 One of the reasons for the high fatalities of these accidents is the **lack of timely medical attention** given to the victims. The total time taken for this first aid to reach the victim can be divided into two segments, T1 and T2.  
   
-![Time Breakdown](assets/Time.png)  
+![Time Breakdown](assets./Time.png)  
 <p align="center">Time Breakdown</p>   
 
 T1 is the time between the accident occurring and it being reported to the nearest emergency center or hospital. This is the **segment that has the most variation**, as for an accident to be reported, there must be someone present at the scene of the accident to manually inform the center that the accident had occurred. Certain modern car models are fitted with sensor arrays and systems that report these accidents, but the vast majority of vehicles across the country and the world are not equipped with these services.  
